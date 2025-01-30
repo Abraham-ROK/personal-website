@@ -1,11 +1,13 @@
 version: '3.8'
 
 services:
-  app:
+  portfolio:
+    container_name: portfolio-nextjs
     build: ./portfolio
-   
+
     ports:
       - "3000:3000"
+
     volumes:
-      - ./portfolio:/app   # Match the host's "portfolio" dir with the container's "/app"
-      - /app/node_modules  # Preserve container's node_modules
+      - ./portfolio:/app    # Mounts project directory to container
+      - /app/node_modules   # Prevents conflicts between host & container dependencies
