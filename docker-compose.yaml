@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: ./portfolio
+   
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./portfolio:/app   # Match the host's "portfolio" dir with the container's "/app"
+      - /app/node_modules  # Preserve container's node_modules
