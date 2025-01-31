@@ -1,13 +1,17 @@
-version: '3.8'
+version: '3.9'  # Use version 3.9 or higher
 
 services:
   portfolio:
     container_name: portfolio-nextjs
-    build: ./portfolio
-
+    build:
+      context: ./portfolio  # This is the directory where the Dockerfile is located
+      dockerfile: Dockerfile  # Optional if Dockerfile is named `Dockerfile`
+    platform: linux/arm64  # Specify the architecture you want (e.g., ARM64)
+    image: personal-website:arm64   # Tag your image as 'myimage:arm64'
+    
     ports:
       - "3000:3000"
-
+    
     volumes:
       - ./portfolio:/app    # Mounts project directory to container
       - /app/node_modules   # Prevents conflicts between host & container dependencies
