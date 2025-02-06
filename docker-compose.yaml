@@ -10,8 +10,8 @@ services:
     volumes:
       - ./build:/app/build
     # Expose the port so you can access the build on the host machine
-    ports:
-      - "8080:80"
+    # ports:
+    #   - "8080:80"
     # Set restart policy (optional, to restart on failure)
     # restart: always
     # command: ["npm", "run", "build"]  # Ensure the build command is executed
