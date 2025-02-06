@@ -1,26 +1,17 @@
-# Use a lightweight Node.js 20 image based on Alpine Linux
-FROM node:20-alpine
+# Use an official Node runtime as a parent image.
+FROM node:16-alpine
 
-# Set the working directory inside the container
+# Set the working directory inside the container.
 WORKDIR /app
 
-# Install system dependencies needed for some Node.js packages
-RUN apk add --no-cache python3 make g++
-
-# Copy package files first to optimize Docker caching
+# Copy dependency definitions.
 COPY package*.json ./
 
-# Install Node.js dependencies (use npm ci in production for stricter installs)
-RUN npm install --force
+# Install dependencies.
+RUN npm install
 
-# Copy the rest of the application code
+# Copy the rest of the application code.
 COPY . .
 
-# Set correct file ownership to a non-root user for security
-RUN chown -R node:node /app
-
-# Switch to the safer non-root user
-USER node
-
-# Start the application in development mode
-CMD ["npm", "run", "dev"]
+# By default, run the build command.
+CMD ["npm", "run", "build"]
