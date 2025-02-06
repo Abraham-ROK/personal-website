@@ -2,11 +2,15 @@ version: '3.8'
 
 services:
   react-build:
+    container_name: personal-website-container  # Custom container name
     build:
       context: ./portfolio
       dockerfile: Dockerfile
-    # Map the build output from the container to the local ./build folder.
+    # Map the build output from the container to the local ./build folder (useful for debugging)
     volumes:
       - ./build:/app/build
-    # Optionally, you can override the command if you want to be explicit.
-    command: ["npm", "run", "build"]
+    # Expose the port so you can access the build on the host machine
+    ports:
+      - "8080:80"
+    # Set restart policy (optional, to restart on failure)
+    # restart: always
