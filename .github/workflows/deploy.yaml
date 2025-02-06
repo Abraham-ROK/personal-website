@@ -1,24 +1,26 @@
-name: Build and Deploy to GitHub Pages
+name: Deploy React App to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Change this to your default branch if different.
+      - main  # Change this to your main branch
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Check out the repository.
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Build the React app using Docker Compose.
-      - name: Build React App with Docker Compose
+      - name: Set up Docker
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
+
+      - name: Build and run with Docker Compose
         run: docker-compose up --build
 
-      # 3. Deploy to GitHub Pages.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
