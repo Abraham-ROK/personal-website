@@ -5,6 +5,9 @@ on:
     branches:
       - main  # Change this to your main branch
 
+permissions:  # Ensure correct permissions
+  contents: write 
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
