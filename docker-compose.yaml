@@ -1,17 +1,12 @@
-version: '3.8'  # Use version 3.9 or higher
+version: '3.8'
 
 services:
-  portfolio:
-    container_name: portfolio-nextjs
+  react-build:
     build:
-      context: ./portfolio  # This is the directory where the Dockerfile is located
-      dockerfile: Dockerfile  # Optional if Dockerfile is named `Dockerfile`
-    platform: linux/amd64  # Specify x86_64 architecture here
-    image: personal-website:amd64   # Tag your image as 'myimage:arm64'
-    
-    ports:
-      - "3000:3000"
-    
+      context: ./portfolio
+      dockerfile: Dockerfile
+    # Map the build output from the container to the local ./build folder.
     volumes:
-      - ./portfolio:/app    # Mounts project directory to container
-      - /app/node_modules   # Prevents conflicts between host & container dependencies
+      - ./build:/app/build
+    # Optionally, you can override the command if you want to be explicit.
+    command: ["npm", "run", "build"]
