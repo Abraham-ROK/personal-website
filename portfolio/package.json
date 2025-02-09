@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://Abraham-ROK.github.io/personal-website",
   "dependencies": {
+    "aos": "^2.3.4",
+    "gsap": "^3.12.7",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^7.1.5",

@@ -1,7 +1,10 @@
+import { navData } from "../../data/navbar_index"; 
+
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
-function Navbar() {
+
+export default function Navbar() {
   const [navActive, setNavActive] = useState(false);
 
   const toggleNav = () => {
@@ -11,19 +14,16 @@ function Navbar() {
   const closeMenu = () => {
     setNavActive(false);
   };
-  
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 500) {
-        closeMenu(); // Added parentheses to call the function
+        closeMenu();
       }
     };
 
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -34,99 +34,56 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${navActive ? "active" : ""}`}>
-      {/* <div>
-        <img src="./img/logo.svg" alt="Logoipsum" />
-      </div> */}
-    <button
-    type="button"
-    className={`nav__hamburger ${navActive ? "active" : ""}`}
-    onClick={toggleNav}
-    >
-    <span className="nav__hamburger__line"></span>
-    <span className="nav__hamburger__line"></span>
-    <span className="nav__hamburger__line"></span>
-    </button>
-{/* 
-John Doe
-About
-Experience
-Projects
-Contact */}
+      {/* Logo */}
+      {/* <div className="logo">{navData.logo}</div> */}
 
+      {/* Hamburger Menu */}
+      <button
+        type="button"
+        className={`nav__hamburger ${navActive ? "active" : ""}`}
+        onClick={toggleNav}
+      >
+        <span className="nav__hamburger__line"></span>
+        <span className="nav__hamburger__line"></span>
+        <span className="nav__hamburger__line"></span>
+      </button>
+
+      {/* Navigation Links */}
       <div className={`navbar--items ${navActive ? "active" : ""}`}>
         <ul>
-          <li>
-            <Link
-              onClick={closeMenu}
-              activeClass="navbar--active-content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="heroSection"
-              className="navbar--content"
-            >
-              About Me 
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={closeMenu}
-              activeClass="navbar--active-content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="MyPortfolio"
-              className="navbar--content"
-            >
-              Experience
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={closeMenu}
-              activeClass="navbar--active-content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="AboutMe"
-              className="navbar--content"
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={closeMenu}
-              activeClass="navbar--active-content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="testimonial"
-              className="navbar--content"
-            >
-              Testimonials
-            </Link>
-          </li>
+          {navData.links.map((link) => (
+            <li key={link.id}>
+              <Link
+                to={link.id}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="navbar--content"
+                activeClass="navbar--active-content"
+                onClick={closeMenu}
+              >
+                {link.text}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
+
+      {/* Contact Button */}
       <Link
-        onClick={closeMenu}
-        activeClass="navbar--active-content"
+        to={navData.contact.id}
         spy={true}
         smooth={true}
         offset={-70}
         duration={500}
-        to="Contact"
         className="btn btn-outline-primary"
+        onClick={closeMenu}
       >
-        Contact Me
+        {navData.contact.text}
       </Link>
     </nav>
   );
 }
 
-export default Navbar;
+
