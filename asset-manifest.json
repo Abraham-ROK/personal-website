@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.b523d9d8.css",
-    "main.js": "/personal-website/static/js/main.1737286e.js",
+    "main.css": "/personal-website/static/css/main.ea35d2f4.css",
+    "main.js": "/personal-website/static/js/main.5dc903f9.js",
     "static/media/resume-example.pdf": "/personal-website/static/media/resume-example.6d7b5f04d7d82937d2a2.pdf",
     "static/media/project-3.png": "/personal-website/static/media/project-3.d5bf2eac8c8937a85bc3.png",
     "static/media/project-2.png": "/personal-website/static/media/project-2.2f15d9f817c3b4924ae6.png",
@@ -12,11 +12,11 @@
     "static/media/checkmark.png": "/personal-website/static/media/checkmark.86728d9a224a2c7c95d4.png",
     "static/media/linkedin.png": "/personal-website/static/media/linkedin.032cf8a63be2f0f4d425.png",
     "index.html": "/personal-website/index.html",
-    "main.b523d9d8.css.map": "/personal-website/static/css/main.b523d9d8.css.map",
-    "main.1737286e.js.map": "/personal-website/static/js/main.1737286e.js.map"
+    "main.ea35d2f4.css.map": "/personal-website/static/css/main.ea35d2f4.css.map",
+    "main.5dc903f9.js.map": "/personal-website/static/js/main.5dc903f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.b523d9d8.css",
-    "static/js/main.1737286e.js"
+    "static/css/main.ea35d2f4.css",
+    "static/js/main.5dc903f9.js"
   ]
 }
