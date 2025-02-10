@@ -31,7 +31,7 @@ import checkmark from "../assets/img/checkmark.png";
 
 // import checkmark from "./assets/checkmark.png";
 
-const data = {
+export const experienceData = {
   experience: [
     {
       id: "1",
@@ -69,4 +69,4 @@ const data = {
   ]
 };
 
-export default data;
+
