@@ -162,7 +162,7 @@ const Navbar = () => {
   const [showHamburger, setShowHamburger] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen((prevState) => !prevState);
+    setIsMenuOpen(prevState => !prevState);
   };
 
   const closeMenu = () => {
@@ -171,28 +171,29 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Define the threshold for "leaving the first page".
-      // Here we assume the first page is roughly the viewport height.
-      const scrollThreshold = window.innerHeight;
-
-      // For big screens (e.g., 1024px and above), only show the hamburger after scrolling past the threshold.
+      // Get the height of the desktop navbar.
+      const desktopNav = document.getElementById('desktop-nav');
+      const navHeight = desktopNav ? desktopNav.offsetHeight : 0;
+      
+      // For big screens (e.g., 1024px and above), show the hamburger menu 
+      // once the user scrolls past the navbar's height.
       if (window.innerWidth >= 1024) {
-        if (window.scrollY > scrollThreshold) {
+        if (window.scrollY > navHeight) {
           setShowHamburger(true);
         } else {
           setShowHamburger(false);
         }
       } else {
-        // On smaller screens, always show the hamburger.
+        // On smaller screens, always show the hamburger menu.
         setShowHamburger(true);
       }
     };
 
-    // Run the check immediately
+    // Run the check immediately.
     handleScroll();
 
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleScroll); // Update when resizing the window
+    window.addEventListener('resize', handleScroll); // Recalculate on resize
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -206,7 +207,7 @@ const Navbar = () => {
         <div className="logo">{navData.logo}</div>
         <div>
           <ul className="nav-links">
-            {navData.links.map((link) => (
+            {navData.links.map(link => (
               <li key={link.id}>
                 <a href={link.href}>{link.text}</a>
               </li>
@@ -215,7 +216,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Always render the hamburger nav but toggle the "visible" class */}
+      {/* Always render the hamburger nav but toggle its visibility using the "visible" class */}
       <nav id="hamburger-nav" className={showHamburger ? 'visible' : ''}>
         <div className="logo">{navData.logo}</div>
         <div className="hamburger-menu">
@@ -229,7 +230,7 @@ const Navbar = () => {
           </div>
           <div className={`menu-links ${isMenuOpen ? 'open' : ''}`}>
             <ul>
-              {navData.links.map((link) => (
+              {navData.links.map(link => (
                 <li key={link.id}>
                   <a href={link.href} onClick={closeMenu}>
                     {link.text}
