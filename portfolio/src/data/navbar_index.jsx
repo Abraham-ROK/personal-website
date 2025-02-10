@@ -1,5 +1,5 @@
 export const navData = {
-  logo: "John Doe",
+  logo: "AK",
   links: [
     { id: "about", href: "#about", text: "About" },
     { id: "experience", href: "#experience", text: "Experience" },

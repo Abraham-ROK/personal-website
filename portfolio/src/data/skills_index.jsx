@@ -1,35 +1,4 @@
 import checkmark from "../assets/img/checkmark.png";
-// import tag1 from "../assets/img/tag-1.png";
-// import featherPen2 from "../assets/img/feather-pen-2.png";
-// import featherPen1 from "../assets/img/feather-pen-1.png";
-// import placeholder1 from "../assets/img/placeholder-image.png";
-// import placeholder2 from "../assets/img/placeholder-image-1.png";
-// import placeholder3 from "../assets/img/placeholder-image-2.png";
-// import avatar1 from "../assets/img/avatar-image.png";
-// import avatar2 from "../assets/img/avatar-image-1.png";
-// import avatar3 from "../assets/img/avatar-image-2.png";
-
-// const data = {
-//   skills: [
-//     { id: "1", src: checkmark, title: "Front-End", description: "HTML", description1: "HTML",level: "Experienced", level1: "Intermediate", level2: "Basic" },
-//     { id: "2", src: checkmark, title: "Back-End", description: "HTML", description1: "HTML",level: "Experienced", level1: "Intermediate", level2: "Basic" },
-//     { id: "3", src: checkmark, title: "UI & UX Design", description: "HTML", description1: "HTML",level: "Experienced", level1: "Intermediate", level2: "Basic" },
-//     { id: "4", src: checkmark, title: "Webflow Development", description: "HTML",level: "Experienced", level2: "Basic" }
-//   ],
-//   portfolio: [
-//     { id: "1", src: checkmark, title: "Ahuse", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique", link: "View In Github" },
-//     { id: "2", src: checkmark, title: "App Dashboard", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique", link: "View In Github" },
-//     { id: "3", src: checkmark, title: "Easy Rentn", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique", link: "View In Github" }
-//   ],
-//   testimonial: [
-//     { id: "1", count: "5", src: checkmark, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique", author_name: "Dianne Russel", author_designation: "Starbucks" },
-//     { id: "2", count: "5", src: checkmark, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique", author_name: "Kristin Watson", author_designation: "Louis Vuitton" },
-//     { id: "3", count: "5", src: checkmark, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique", author_name: "Kathryn Murphy", author_designation: "McDonald's" }
-//   ]
-// };
-
-
-// import checkmark from "./assets/checkmark.png";
 
 export const experienceData = {
   experience: [

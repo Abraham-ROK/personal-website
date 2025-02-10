@@ -352,11 +352,21 @@
   }
 } */
 
+/* For large screens (above 1200px) */
+@media screen and (min-width: 1200px) {
+  #profile {
+    /* Remove unnecessary top padding */
+    padding-top: 0;  /* Ensure the profile section is closer to the navbar */
+    margin-top: -2rem;  /* Remove margin to avoid unwanted space */
+    height: auto;    /* Adjust height to fit content without stretching */
+  }
+}
 
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
+    padding-top: 10vh; /* Adjust padding for medium screens */
   }
   .about-containers {
     flex-wrap: wrap;
@@ -381,6 +391,7 @@
   #profile,
   .section-container {
     display: block;
+    padding-top: 5vh;  /* Adjust padding to bring it closer to navbar on smaller screens */
   }
   .arrow {
     display: none;
@@ -410,6 +421,7 @@
   #profile {
     height: 83vh;
     margin-bottom: 0;
+    padding-top: 8vh; /* Keep padding proportional on small screens */
   }
   article {
     font-size: 1rem;
@@ -457,3 +469,20 @@
   }
 }
 
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 1200px) {
+  #contact {
+    height: auto; /* Allow auto height on medium screens too */
+    padding-top: 10vh; /* Add more space on small screens if needed */
+    margin-top: 0; /* Prevent any margin from creating a gap */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media screen and (max-width: 768px) {
+  #contact {
+    padding-top: 8vh; /* Fine-tune padding for smaller screens */
+    margin-top: 0; /* Make sure there’s no unwanted margin */
+  }
+}

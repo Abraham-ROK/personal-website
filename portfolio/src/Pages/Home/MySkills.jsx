@@ -1,38 +1,3 @@
-// import data from "../../data/skills_index";
-
-
-// export default function MySkills() {
-//   return (
-//     <section id="experience">
-//       <p className="section__text__p1">Want to</p>
-//       <h1 className="title">Explore My Skills</h1>
-//       <div className="experience-details-container">
-//         <div className="about-containers">
-//           {data.experience.map((group) => (
-//             <div key={group.id} className="details-container">
-//               <h2 className="experience-sub-title">{group.title}</h2>
-//               <div className="article-container">
-//                 {group.skills.map((skill) => (
-//                   <article key={skill.id}>
-//                     <img src={skill.icon} alt="Experience icon" className="icon" />
-//                     <div>
-//                       <h3>{skill.name}</h3>
-//                       <p>{skill.level}</p>
-//                     </div>
-//                   </article>
-//                 ))}
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-
-//     </section>
-//   );
-// }
-
-
-// import React from 'react';
 import { experienceData } from '../../data/skills_index';
 
 const MySkills = () => {
