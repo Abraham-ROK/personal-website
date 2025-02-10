@@ -58,25 +58,50 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
+/* Ripple Effect */
 .logo {
-  font-size: 2.5rem;
-}
-
-.logo:hover {
-  cursor: default;
-}
+    position: relative;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    overflow: hidden;
+    text-transform: uppercase;
+  }
+  
+  .logo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(189, 189, 189, 0.2); /* Blue ripple effect */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.4s ease;
+  }
+  
+  .logo:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Expands the ripple on hover */
+  }
+  
+  
 
 /* HAMBURGER MENU */
 
+/* By default, keep the hamburger menu hidden */
 #hamburger-nav {
-  display: none;
-}
-
-/* When the 'visible' class is added, show it */
-#hamburger-nav.visible {
-    display: block; /* or inline-block, flex, etc., as needed */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
-
+  
+  /* When scrolling past the navbar, smoothly fade it in */
+  #hamburger-nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
 .hamburger-menu {
   /* position: relative;
   display: inline-block; */
@@ -181,11 +206,13 @@ section {
 /* PROFILE SECTION */
 
 #profile {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  height: 80vh;
-}
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding-top: 8vh; /* Initial padding for smaller screens */
+    box-sizing: border-box;
+    min-height: calc(80vh - 8vh); /* Adjust height for smaller screens */
+  }
 
 .section__pic-container {
   display: flex;
@@ -229,6 +256,7 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  background: rgb(255, 255, 255);
 }
 
 /* BUTTONS */
@@ -247,25 +275,19 @@ section {
   border-radius: 2rem;
 }
 
-.btn-color-1,
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
 }
 
-.btn-color-1:hover,
 .btn-color-2:hover {
   cursor: pointer;
 }
 
-.btn-color-1,
 .btn-color-2:hover {
   background: rgb(53, 53, 53);
   color: white;
 }
 
-.btn-color-1:hover {
-  background: rgb(0, 0, 0);
-}
 
 .btn-color-2 {
   background: none;
@@ -305,12 +327,6 @@ section {
   border-radius: 2rem;
 }
 
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-}
-
 .details-container {
   padding: 1.5rem;
   flex: 1;
@@ -320,6 +336,12 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
+
+.details-container:hover {
+    transform: translateY(-10px); /* Moves the block up */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    transition: all ease-in-out 0.3s;
+  }
 
 .section-container {
   gap: 4rem;
@@ -375,6 +397,7 @@ article .icon {
 
 #projects {
   position: relative;
+  margin-top: 2rem; /* Adjust the value as needed to create a gap */
 }
 
 .color-container {
@@ -401,11 +424,14 @@ article .icon {
 /* CONTACT */
 
 #contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 70vh;
-}
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 0vh; /* Adjust the padding as needed for space */
+    margin-top: 0; /* Make sure there is no top margin causing the gap */
+    margin-bottom: 0; /* Remove any margin at the bottom */
+    height: auto; /* Let the height be determined by the content */
+  }
 
 .contact-info-upper-container {
   display: flex;
@@ -435,8 +461,10 @@ article .icon {
 }
 
 .email-icon {
-  height: 2.5rem;
-}
+    height: 2.54rem; /* Adjust to match other icons */
+    object-fit: contain; /* Ensures icon doesn't stretch */
+    vertical-align: middle; /* Centers the icon vertically */
+  }
 
 /* FOOTER SECTION */
 
@@ -467,10 +495,12 @@ footer p {
     justify-content: flex-start; /* Ensure items start from left */
     align-items: center;
     position: relative;
+    margin-top: 2rem; /* Adjust the value as needed to create a gap */
   }
     
   /* The scrolling container holding all the items */
   .projects-container {
+    gap: 2.5rem;
     display: flex;
     flex-wrap: nowrap; /* Prevent line breaks */
     width: max-content; /* Container spans exactly the width of its children */

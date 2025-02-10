@@ -2,7 +2,6 @@ import profilePic from "../assets/img/profile-pic.png";
 import resumePDF from "../assets/img/resume-example.pdf";
 import linkedinIcon from "../assets/img/linkedin.png";
 import githubIcon from "../assets/img/github.png";
-// import educationIcon from "../assets/img/education.png";
 
 export const profileData = {
   id: "profile",

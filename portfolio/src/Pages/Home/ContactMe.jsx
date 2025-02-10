@@ -1,7 +1,6 @@
 import React from "react";
 import { contactData } from "../../data/contact_me_index";
 
-
 const Contact = () => {
   return (
     <section id="contact">
@@ -15,7 +14,7 @@ const Contact = () => {
                 <img
                   src={info.iconSrc}
                   alt={info.iconAlt}
-                  className="icon"
+                  className={`icon ${info.iconClass}`}  // Use the dynamic class here
                 />
               </a>
               <p>

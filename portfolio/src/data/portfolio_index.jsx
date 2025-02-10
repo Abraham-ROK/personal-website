@@ -35,7 +35,6 @@ export const portfolioData = {
         demoLink: "https://github.com/",
       },
     ],
-    // arrowIcon: "./assets/arrow.png",
-    // arrowLink: "./#contact",
+  
   };
   
