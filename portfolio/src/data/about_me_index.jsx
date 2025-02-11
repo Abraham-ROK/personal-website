@@ -1,4 +1,5 @@
-import heroImg from "../assets/img/hero_img.png";
+// import heroImg from "../assets/img/hero_img.png";
+import heroImg from "../assets/img/giphy5.gif";
 import experienceIcon from "../assets/img/experience.png";
 import educationIcon from "../assets/img/education.png";
 
@@ -18,8 +19,7 @@ export const heroData = {
     {
       id: "2",
       icon: educationIcon,
-      title: "Education",
-      description: "B.Sc. Bachelors Degree",
+      title: "Education",      description: "B.Sc. Bachelors Degree",
       extra: "M.Sc. Masters Degree",
     },
   ],
