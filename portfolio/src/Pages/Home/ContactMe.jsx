@@ -1,7 +1,10 @@
 import React from "react";
 import { contactData } from "../../data/contact_me_index";
+import { useDarkMode } from "../Home/Hooks/useDarkMode";// Adjust the path as needed
 
 const Contact = () => {
+  const darkMode = useDarkMode();
+
   return (
     <section id="contact">
       <p className="section__text__p1">{contactData.sectionTitle}</p>
@@ -12,9 +15,10 @@ const Contact = () => {
             <div key={info.id} className="contact-info-container">
               <a href={info.link}>
                 <img
-                  src={info.iconSrc}
+                  // Use the dark mode icon if dark mode is active, otherwise use the default icon
+                  src={darkMode ? info.iconSrcDark : info.iconSrc}
                   alt={info.iconAlt}
-                  className={`icon ${info.iconClass}`}  // Use the dynamic class here
+                  className={`icon ${info.iconClass}`}
                 />
               </a>
               <p>

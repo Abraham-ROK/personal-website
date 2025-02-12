@@ -2,6 +2,84 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+
+/* Default Light Mode */
+:root {
+  --primary-color: white;
+  --primary-color-2: rgb(250, 250, 250);
+  /* --primary-color-3: rgb(181, 181, 181); */
+  --background-color: rgb(255, 255, 255);
+  --secondary-color: black;
+  --secondary-color-2: rgb(85, 85, 85);
+  --button-text-color: black;
+  --button-background: rgb(53, 53, 53);
+  --button-text-hover: grey;
+  --button-border: rgb(53, 53, 53) 0.1rem solid;
+  /* --button-border-2: rgb(255, 255, 255) 0.1rem solid; */
+  --container-border: rgb(163, 163, 163);
+  /* --logo-background: #ffffff; */
+  /* --logo-text: #333; */
+  --logo-hover-shadow: rgba(0, 0, 0, 0.1);
+  /* --logo-ripple: rgba(181, 182, 182, 0.1); */
+  --menu-hover-color: grey;
+  --menu-underline-color: rgb(181, 181, 181);
+  --icon-background: rgb(255, 255, 255);
+  --experience-subtitle-color: rgb(85, 85, 85);
+  --hover-box-shadow: rgba(0, 0, 0, 0.1);
+  --moon-background: radial-gradient(circle at center, #f0f0f0 30%, #d0d0d0 60%, #b0b0b0 100%);
+  --moon-box-shadow-1: rgba(0, 0, 0, 0.2);
+  --moon-before-back: #c0c0c0;
+  --moon-box-shadow-2:rgba(0, 0, 0, 0.5);
+  --moon-box-shadow-3: 0 0 30px rgba(0, 0, 0, 0.3); /* Soft dark shadow with more depth */
+}
+
+
+/* Dark Mode */
+[theme="dark-mode"] {
+  --primary-color: rgba(0, 0, 0, 0.617); /* color for Experience Education and Explore My
+
+  Experience*/
+  --primary-color-2: rgb(39, 39, 39); /* color for project and Contact Me*/
+  /* --primary-color-3: rgb(74, 74, 74); */
+  --background-color: rgb(33, 33, 33); /* hole page color*/
+  --secondary-color: white;
+  --secondary-color-2: rgb(170, 170, 170);
+  --button-background: rgb(202, 202, 202);
+  --button-text-color: white;
+  --button-text-hover: lightgrey;
+  --button-border: rgb(202, 202, 202) 0.1rem solid;
+  /* --button-border-2: rgb(247, 244, 244) 0.1rem solid; */
+  --container-border: rgb(92, 92, 92);
+  /* --logo-background: #333; */
+  /* --logo-text: #000000; */
+  --logo-hover-shadow: rgba(3, 3, 3, 0.2);
+  /* --logo-ripple: rgba(255, 255, 255, 0.1); */
+  --menu-hover-color: lightgrey;
+  --menu-underline-color: rgb(170, 170, 170);
+  --icon-background: rgb(33, 33, 33);
+  --experience-subtitle-color: rgb(200, 200, 200);
+  --hover-box-shadow: rgba(255, 255, 255, 0.1);
+  /* Dark Mode Colors */
+--moon-background: radial-gradient(circle at center, #3a3a3a 30%, #2b2b2b 60%, #1a1a1a 100%);
+--moon-box-shadow-1: rgba(255, 255, 255, 0.2);  /* Lighter shadow for the moon */
+--moon-before-back: #555555;  /* Darker gray for the crater */
+--moon-box-shadow-2: rgba(0, 0, 0, 0.7);  /* Stronger shadow to enhance depth */
+--moon-box-shadow-3: 0 0 20px rgba(255, 255, 255, 0.5); /* Optional glow effect */
+}
+
+
+/* Optional: Update the logo appearance in dark mode */
+/* body.dark-mode .logo {
+  background: var(--logo-background);
+  color: var(--logo-text);
+} */
+
+h3 {
+  color: var(--secondary-color);
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +87,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
 }
 
 html {
@@ -16,7 +95,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--secondary-color-2);
 }
 
 /* TRANSITION FOR LINKS*/
@@ -46,63 +125,81 @@ nav {
 }
 
 a {
-  color: black;
+  color: var(--secondary-color);
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: var(--primary-color);
+
 }
 
-a:hover {
-  color: grey;
+nav a:hover {
+  color: var(--button-text-hover);
   text-decoration: underline;
   text-underline-offset: 0.7rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: var(--secondary-color);
 }
 
-/* Apple-Inspired Logo with System Font */
 .logo {
-  position: relative;
-  width: 100px;              /* Consistent dimensions for a perfect circle */
-  height: 100px;
-  border-radius: 50%;        /* Circular shape */
-  background: #ffffff;       /* Clean, neutral background */
+  position: absolute;
+  top: 18px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;  /* Perfect circle for full moon */
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #333;               /* Muted text color for sophistication */
   overflow: hidden;
   text-transform: uppercase;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle initial shadow */
+
+  /* Background for a moon-like effect (full moon) */
+  background: var(--moon-background);
+  /* This gradient simulates the moon's surface with lighter and darker areas */
+  
+  box-shadow: 0 2px 10px var(--moon-box-shadow-1),var(--moon-box-shadow-3);  /* Optional shadow to make it look more 3D */
 }
 
-.logo:hover {
-  transform: scale(1.05);    /* A slight, refined scale-up */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /* Enhanced shadow for depth */
-}
-
+/* Crater effect with ::before (moon surface detail) */
 .logo::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;               /* Slightly larger to create an elegant ripple */
-  height: 120%;
-  background: rgba(181, 182, 182, 0.1); /* Subtle blue tint reminiscent of refined palettes */
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
+  top: 15%;  /* Adjust position of the crater */
+  left: 30%;  /* Adjust position of the crater */
+  width: 20%;  /* Size of the crater */
+  height: 20%;  /* Size of the crater */
+  background: var(--moon-before-back);  /* Crater color */
+  border-radius: 50%;  /* Circular crater */
+  box-shadow: inset 0 0 5px var(--moon-box-shadow-2);  /* Adding depth to the crater */
+}
+
+
+
+/* When the logo becomes sticky, apply the fixed positioning and reduce size */
+.sticky-logo {
+  position: fixed; 
+  top: 15px;
+  left: 50px;
+  z-index: 10000;
+  background-color: var(--primary-color); /* Optional: helps prevent overlap with content */
+  padding: 0.3rem; /* Reduce padding for a smaller logo */
+  font-size: 1.2rem; /* Optional: adjust font size for a smaller logo */
+  width: 40px;  /* Set the width of the logo circle */
+  height: 40px; /* Set the height of the logo circle */
+  border-radius: 50%; /* Keep it circular */
   transition: transform 0.4s ease, opacity 0.4s ease;
+  background: var(--moon-background);
+  color: var(--logo-text);
 }
 
-.logo:hover::before {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
+.sticky-logo,
+.logo:hover {
+  transform: scale(1.05);    /* A slight, refined scale-up */
+  box-shadow: 0 4px 20px var(--logo-hover-shadow);  /* Enhanced shadow for depth */
 }
 
-  
 
 /* HAMBURGER MENU */
 
@@ -142,7 +239,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: var(--secondary-color);
   transition: all ease-in-out 0.25s;
 }
 
@@ -150,7 +247,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--background-color);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -162,16 +259,17 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: rgb(0, 0, 0);
+  color:  var(--secondary-color);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
 
+/* Menu Links */
 .menu-links a:hover {
-    color: grey;
-    text-decoration: underline;
-    text-underline-offset: 0.7rem;
-    text-decoration-color: rgb(181, 181, 181);
+  color: var(--menu-hover-color);
+  text-decoration: underline;
+  text-underline-offset: 0.7rem;
+  text-decoration-color: var(--menu-underline-color);
 }
 
 .menu-links li {
@@ -267,6 +365,7 @@ section {
 }
 
 .title {
+  color: var(--secondary-color);
   font-size: 3rem;
   text-align: center;
 }
@@ -284,14 +383,13 @@ section {
   gap: 1rem;
 }
 
-/* ICONS */
 
+/* Icons */
 .icon {
   cursor: pointer;
   height: 2rem;
-  background: rgb(255, 255, 255);
+  background: var(--icon-background);
 }
-
 /* BUTTONS */
 
 .btn-container {
@@ -308,26 +406,34 @@ section {
   border-radius: 2rem;
 }
 
+.btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: var(--button-border);
+  color: var(--secondary-color-2);
 }
 
+.btn-color-1:hover,
 .btn-color-2:hover {
   cursor: pointer;
 }
 
+.btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: var(--button-background);
+  color: var(--primary-color);
 }
 
+.btn-color-1:hover {
+  background: var(--secondary-color);
+}
 
 .btn-color-2 {
   background: none;
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: var(--button-border);
+  background: var(--secondary-color);
 }
 
 .btn-container {
@@ -363,16 +469,16 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--primary-color-2);
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: var(--button-border);
+  border-color: var(--container-border);
   text-align: center;
 }
 
 .details-container:hover {
     transform: translateY(-10px); /* Moves the block up */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    box-shadow: 0px 10px 20px var(--hover-box-shadow); /* Optional: Adds a subtle shadow */
     transition: all ease-in-out 0.3s;
   }
 
@@ -393,8 +499,9 @@ section {
   position: relative;
 }
 
+/* Experience Subtitle */
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--experience-subtitle-color);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -434,8 +541,8 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: var(--container-border);
+  background: var(--primary-color-2);
 }
 
 .project-img {
@@ -446,12 +553,12 @@ article .icon {
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: var(--secondary-color);
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: var(--secondary-color);
+  border-color: var(--container-border);
 }
 
 /* CONTACT */
@@ -470,9 +577,9 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: var(--button-border);
+  border-color: var(--container-border);
+  background: var(--primary-color-2);
   margin: 2rem auto;
   padding: 0.5rem;
 }

@@ -1,10 +1,17 @@
+import React from "react";
 import { profileData } from "../../data/hero_section_index";
+import { useDarkMode } from "../Home/Hooks/useDarkMode"; // adjust the path as needed
 
 const HeroSection = () => {
+  const darkMode = useDarkMode();
+
   return (
     <section id={profileData.id}>
       <div className="hero_section__pic-container">
-        <img src={profileData.image} alt={`${profileData.altText} profile`} />
+        <img
+          src={profileData.image}
+          alt={`${profileData.altText} profile`}
+        />
       </div>
       <div className="section__text">
         <p className="section__text__p1">{profileData.greeting}</p>
@@ -12,7 +19,12 @@ const HeroSection = () => {
         <p className="section__text__p2">{profileData.title}</p>
         <div className="location">
           <img
-            src={profileData.location_image}
+            // Use dark mode image if dark mode is enabled, otherwise use the light version
+            src={
+              darkMode
+                ? profileData.location_imageDark
+                : profileData.location_image
+            }
             className="icon"
             alt="Location Icon"
           />
@@ -28,7 +40,9 @@ const HeroSection = () => {
           </button>
           <button
             className="btn btn-color-2"
-            onClick={() => window.location.href = profileData.contactLink}
+            onClick={() =>
+              (window.location.href = profileData.contactLink)
+            }
           >
             Contact Info
           </button>
@@ -37,10 +51,11 @@ const HeroSection = () => {
           {profileData.socials.map((social) => (
             <img
               key={social.id}
-              src={social.icon}
+              // Use dark mode icon if dark mode is active; otherwise use the default icon
+              src={darkMode ? social.iconDark : social.icon}
               alt={social.altText}
               className="icon"
-              onClick={() => window.location.href = social.link}
+              onClick={() => (window.location.href = social.link)}
             />
           ))}
         </div>
