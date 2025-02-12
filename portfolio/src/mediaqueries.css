@@ -159,3 +159,66 @@
     text-align: center;
   }
 }
+
+/* Media Query for small screens */
+@media screen and (max-width: 768px) {
+  .logo {
+    position: fixed;  /* Change position to fixed */
+    top: 15px;         /* Stick it at the top */
+    left: 50px;        /* Keep left offset */
+    z-index: 10000;
+    width: 40px;       /* Smaller logo on smaller screens */
+    height: 40px;      /* Adjust size */
+    font-size: 1.2rem; /* Slightly smaller font size */
+    padding: 0.3rem;   /* Reduce padding for a smaller logo */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  .sticky-logo,
+  .logo:hover {
+    transform: scale(1.05); /* A slight, refined scale-up */
+    box-shadow: 0 4px 20px var(--logo-hover-shadow);  /* Enhanced shadow for depth */
+  }
+}
+
+/* Media Query for screens from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo {
+    position: fixed;  /* Make the logo fixed on scroll */
+    top: 15px;         /* Stick it at the top */
+    left: 50px;        /* Keep left offset */
+    z-index: 10000;
+    width: 50px;       /* Slightly smaller logo for medium screens */
+    height: 50px;      /* Adjust size */
+    font-size: 1.3rem; /* Adjust font size */
+    padding: 0.3rem;   /* Reduce padding */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  .sticky-logo,
+  .logo:hover {
+    transform: scale(1.05); /* A slight, refined scale-up */
+    box-shadow: 0 4px 20px var(--logo-hover-shadow);  /* Enhanced shadow for depth */
+  }
+}
+
+/* Media Query for screens larger than 1024px */
+@media screen and (min-width: 1024px) {
+  .logo {
+    position: fixed;  /* Keep logo fixed even on larger screens */
+    top: 15px;         /* Stick it at the top */
+    left: 50px;        /* Keep left offset */
+    z-index: 10000;
+    width: 60px;       /* Larger logo size for large screens */
+    height: 60px;      /* Adjust size */
+    font-size: 1.5rem; /* Default font size */
+    padding: 0.3rem;   /* Keep padding */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  .sticky-logo,
+  .logo:hover {
+    transform: scale(1.05); /* A slight, refined scale-up */
+    box-shadow: 0 4px 20px var(--logo-hover-shadow);  /* Enhanced shadow for depth */
+  }
+}

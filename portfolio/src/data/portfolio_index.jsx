@@ -27,13 +27,7 @@ export const portfolioData = {
         githubLink: "https://github.com/",
         demoLink: "https://github.com/",
       },
-      {
-        id: 4,
-        title: "Project Three",
-        imgSrc: project3,
-        githubLink: "https://github.com/",
-        demoLink: "https://github.com/",
-      },
+     
     ],
   
   };
