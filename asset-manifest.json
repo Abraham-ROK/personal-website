@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-website/static/css/main.565e68de.css",
-    "main.js": "/personal-website/static/js/main.44028985.js",
+    "main.js": "/personal-website/static/js/main.193f1fa6.js",
     "static/media/giphy5.gif": "/personal-website/static/media/giphy5.fc043a262d934a3d45dd.gif",
     "static/media/resume-example.pdf": "/personal-website/static/media/resume-example.6d7b5f04d7d82937d2a2.pdf",
     "static/media/project-3.png": "/personal-website/static/media/project-3.d5bf2eac8c8937a85bc3.png",
@@ -20,10 +20,10 @@
     "static/media/linkedin.png": "/personal-website/static/media/linkedin.032cf8a63be2f0f4d425.png",
     "index.html": "/personal-website/index.html",
     "main.565e68de.css.map": "/personal-website/static/css/main.565e68de.css.map",
-    "main.44028985.js.map": "/personal-website/static/js/main.44028985.js.map"
+    "main.193f1fa6.js.map": "/personal-website/static/js/main.193f1fa6.js.map"
   },
   "entrypoints": [
     "static/css/main.565e68de.css",
-    "static/js/main.44028985.js"
+    "static/js/main.193f1fa6.js"
   ]
 }
