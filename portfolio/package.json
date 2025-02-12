@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Abraham-ROK.github.io/personal-website",
+  "homepage": "https://Abraham.github.io/personal-website",
   "dependencies": {
     "aos": "^2.3.4",
     "gsap": "^3.12.7",
