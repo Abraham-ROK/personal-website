@@ -20,7 +20,7 @@ export const profileData = {
   location_image: locationImage,
   location_imageDark: locationImageDark,
   resume: resumePDF,
-  contactLink: "./personal-website#contact",
+  contactLink: "#contact",
   socials: [
     {
       id: "linkedin",
