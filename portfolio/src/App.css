@@ -173,6 +173,8 @@ nav a:hover {
   background: var(--moon-before-back);  /* Crater color */
   border-radius: 50%;  /* Circular crater */
   box-shadow: inset 0 0 5px var(--moon-box-shadow-2);  /* Adding depth to the crater */
+  transform: rotate(90deg);
+  transition: transform 0.5s ease;
 }
 
 
@@ -205,6 +207,7 @@ nav a:hover {
 
 /* By default, keep the hamburger menu hidden */
 #hamburger-nav {
+  height: auto !important;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -212,6 +215,7 @@ nav a:hover {
   
   /* When scrolling past the navbar, smoothly fade it in */
   #hamburger-nav.visible {
+    height: auto !important;
     opacity: 1;
     visibility: visible;
   }
@@ -318,15 +322,27 @@ section {
   display: flex;
 }
 
-/* PROFILE SECTION */
+/* PROFILE SECTION */ 
+
+#desktop-nav {
+  height: auto !important;
+  padding-top: 5vh;
+  background-color: var(--background-color);
+  z-index: 1000;
+  /* border: 6px solid rgb(0, 255, 81); */
+}
 
 #profile {
+    height: auto !important;
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 5rem;
     padding-top: 8vh; /* Initial padding for smaller screens */
+    margin-bottom: 5rem;
     box-sizing: border-box;
-    min-height: calc(80vh - 8vh); /* Adjust height for smaller screens */
+    min-height: 80vh;  /* Allows flexibility */
+    /* border: 6px solid red; */
   }
 
 .section__pic-container {
@@ -377,6 +393,7 @@ section {
 }
 
 #socials-container {
+  height: auto !important;
   display: flex;
   justify-content: center;
   margin-top: 1rem;
@@ -443,7 +460,11 @@ section {
 /* ABOUT SECTION */
 
 #about {
+  height: auto !important;
   position: relative;
+  padding-top: 5rem;
+  margin-top: 0rem; /* More separation */
+  /* border: 2px solid blue; */
 }
 
 .about-containers {
@@ -496,7 +517,9 @@ section {
 /* EXPERIENCE SECTION */
 
 #experience {
+  height: auto !important;
   position: relative;
+  margin-top: 2rem; /* Adjust the value as needed to create a gap */
 }
 
 /* Experience Subtitle */
@@ -536,6 +559,7 @@ article .icon {
 /* PROJECTS SECTION */
 
 #projects {
+  height: auto !important;
   position: relative;
   margin-top: 2rem; /* Adjust the value as needed to create a gap */
 }
@@ -564,10 +588,11 @@ article .icon {
 /* CONTACT */
 
 #contact {
+    height: auto !important;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top: 0vh; /* Adjust the padding as needed for space */
+    padding-top: 10vh; /* Adjust the padding as needed for space */
     margin-top: 0; /* Make sure there is no top margin causing the gap */
     margin-bottom: 0; /* Remove any margin at the bottom */
     height: auto; /* Let the height be determined by the content */

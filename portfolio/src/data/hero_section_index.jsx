@@ -1,5 +1,5 @@
 import profilePic from "../assets/img/giphy_work.gif";
-import resumePDF from "../assets/img/resume-example.pdf";
+import resumePDF from "../assets/img/Abraham_Kenneth_DE.pdf";
 import linkedinIcon from "../assets/img/linkedin.png";
 import githubIcon from "../assets/img/github.png";
 import locationImage from "../assets/img/location.png";
