@@ -7,9 +7,9 @@ export const experienceData = {
       id: "1",
       title: "Data Engineer",
       skills: [
-        { id: "1-1", icon: checkmarkLight, iconDark: checkmarkDark, name: "HTML", level: "Experienced" },
-        { id: "1-2", icon: checkmarkLight, iconDark: checkmarkDark,  name: "CSS", level: "Experienced" },
-        { id: "1-3", icon: checkmarkLight, iconDark: checkmarkDark,  name: "SASS", level: "Intermediate" },
+        { id: "1-1", icon: checkmarkLight, iconDark: checkmarkDark, name: "Python", level: "Experienced" },
+        { id: "1-2", icon: checkmarkLight, iconDark: checkmarkDark,  name: "SQL", level: "Experienced" },
+        { id: "1-3", icon: checkmarkLight, iconDark: checkmarkDark,  name: "JavaScript", level: "Intermediate" },
         { id: "1-4", icon: checkmarkLight, iconDark: checkmarkDark,  name: "JavaScript", level: "Basic" },
         { id: "1-5", icon: checkmarkLight, iconDark: checkmarkDark,  name: "TypeScript", level: "Basic" },
         { id: "1-6", icon: checkmarkLight, iconDark: checkmarkDark,  name: "Material UI", level: "Intermediate" }
@@ -20,7 +20,7 @@ export const experienceData = {
       title: "Data Analyst",
       skills: [
         { id: "2-1", icon: checkmarkLight, iconDark: checkmarkDark,  name: "PostgreSQL", level: "Basic" },
-        { id: "2-2", icon: checkmarkLight, iconDark: checkmarkDark,  name: "Node JS", level: "Intermediate" },
+        { id: "2-2", icon: checkmarkLight, iconDark: checkmarkDark,  name: "Power Bi", level: "Intermediate" },
         { id: "2-3", icon: checkmarkLight, iconDark: checkmarkDark,  name: "Express JS", level: "Intermediate" },
         { id: "2-4", icon: checkmarkLight, iconDark: checkmarkDark,  name: "Git", level: "Intermediate" }
       ]

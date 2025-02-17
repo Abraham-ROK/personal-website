@@ -9,15 +9,21 @@ export default function HeroSection() {
       <h1 className="title">{heroData.subtitle}</h1>
       <div className="section-container">
         <div className="section__pic-container">
-          <img src={heroData.image} alt="Profile portrait" className="about-pic" />
+          <img
+            src={heroData.image}
+            alt="Profile portrait"
+            className="about-pic"
+          />
         </div>
         <div className="about-details-container">
           <div className="about-containers">
             {heroData.details.map((detail) => (
               <div key={detail.id} className="details-container">
-                <img 
-                src={darkMode ? detail.iconDark : detail.icon}
-                alt={`${detail.title} icon`} className="icon" />
+                <img
+                  src={darkMode ? detail.iconDark : detail.icon}
+                  alt={`${detail.title} icon`}
+                  className="icon"
+                />
                 <h3>{detail.title}</h3>
                 <p>
                   {detail.description} <br /> {detail.extra}
@@ -26,11 +32,17 @@ export default function HeroSection() {
             ))}
           </div>
           <div className="text-container">
+            {/* Render the introductory text as a paragraph */}
             <p>{heroData.aboutText}</p>
+            {/* Render the additional points as a bullet list */}
+            <ul>
+              {heroData.aboutBullets.map((bullet, index) => (
+                <li key={index} style={{ fontWeight: 'bold' }}>{bullet}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
-
     </section>
   );
 }

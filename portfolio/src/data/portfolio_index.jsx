@@ -3,7 +3,7 @@ import project2 from "../assets/img/project-2.png";
 import project3 from "../assets/img/project-3.png";
 
 export const portfolioData = {
-    sectionTitle: "Browse My Recent",
+    sectionTitle: "Want to Browse My Recent",
     mainTitle: "Projects",
     projects: [
       {
