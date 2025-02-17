@@ -44,7 +44,7 @@ const HeroSection = () => {
               (window.location.href = profileData.contactLink)
             }
           >
-            Contact Info
+            Contact Me
           </button>
         </div>
         <div id="socials-container">

@@ -1,18 +1,23 @@
-/* For large screens (above 1200px) */
+/* ------------------------------
+   For screens above 1200px
+------------------------------ */
 @media screen and (min-width: 1200px) {
   #profile {
-    /* Remove unnecessary top padding */
-    padding-top: 0;  /* Ensure the profile section is closer to the navbar */
-    margin-top: -2rem;  /* Remove margin to avoid unwanted space */
-    height: auto;    /* Adjust height to fit content without stretching */
+    /* Ensure the profile section sits closer to the navbar */
+    padding-top: 0;
+    margin-top: -2rem;
+    height: auto; /* Adjust height to fit content */
   }
 }
 
+/* ------------------------------
+   For screens up to 1400px
+------------------------------ */
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-    padding-top: 10vh; /* Adjust padding for medium screens */
+    height: 60vh;
+    min-height: 40vh;
+    /* margin-bottom: 6rem; */
   }
   .about-containers {
     flex-wrap: wrap;
@@ -20,16 +25,26 @@
   #contact,
   #projects {
     height: fit-content;
+    min-height: 20vh;
   }
 }
 
+/* ------------------------------
+   For screens up to 1200px
+------------------------------ */
 @media screen and (max-width: 1200px) {
+  /* Navigation adjustments */
   #desktop-nav {
     display: none;
   }
   #hamburger-nav {
     display: flex;
   }
+  #experience {
+    min-height: 45vh;
+  }
+  
+  /* Section adjustments */
   #experience,
   .experience-details-container {
     margin-top: 2rem;
@@ -37,17 +52,15 @@
   #profile,
   .section-container {
     display: block;
-    padding-top: 5vh;  /* Adjust padding to bring it closer to navbar on smaller screens */
-  }
-  .arrow {
-    display: none;
+    padding-top: 5vh; /* Bring sections closer to the navbar */
+    min-height: 40vh;
   }
   section,
   .section-container {
     height: fit-content;
   }
   section {
-    margin: 0 5%;
+    margin: 0 10%;
   }
   .hero_section__pic-container,
   .section__pic-container {
@@ -58,17 +71,110 @@
   .about-containers {
     margin-top: 0;
   }
+  
+  /* Alignment fix for location */
+  .location {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Contact section */
+  #contact {
+    height: auto;
+    padding-top: 10vh;
+    margin-top: 0;
+  }
 }
 
+/* ------------------------------
+   For screens up to 768px
+------------------------------ */
+@media screen and (max-width: 768px) {
+  #contact {
+    padding-top: 8vh; /* Fine-tune padding for smaller screens */
+    margin-top: 0;
+  }
+  
+  /* Logo adjustments */
+  .logo {
+    position: fixed;
+    top: 15px;
+    left: 50px;
+    z-index: 10000;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  .sticky-logo,
+  .logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px var(--logo-hover-shadow);
+  }
+  
+  /* Increase top margin for about section */
+  #about {
+    margin-top: 10rem;
+  }
+}
+
+/* ------------------------------
+   For screens between 768px and 1024px
+------------------------------ */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo {
+    position: fixed;
+    top: 15px;
+    left: 50px;
+    z-index: 10000;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    padding: 0.3rem;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  .sticky-logo,
+  .logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px var(--logo-hover-shadow);
+  }
+}
+
+/* ------------------------------
+   For screens larger than 1024px
+------------------------------ */
+@media screen and (min-width: 1024px) {
+  .logo {
+    position: fixed;
+    top: 15px;
+    left: 50px;
+    z-index: 10000;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  .sticky-logo,
+  .logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px var(--logo-hover-shadow);
+  }
+}
+
+/* ------------------------------
+   For screens up to 600px
+------------------------------ */
 @media screen and (max-width: 600px) {
   #contact,
   footer {
     height: 40vh;
   }
   #profile {
-    min-height: 80vh; /* Ensures enough height without restricting content */
-    margin-bottom: 8;
-    padding-top: 8vh; /* Keep padding proportional on small screens */
+    /* min-height: 30vh; */
+    margin-bottom: 8rem;
+    /* padding-top: 8vh; */
     margin: 10 auto;
   }
   article {
@@ -101,21 +207,18 @@
     gap: 0.5rem;
     text-align: center;
   }
-  /* .hero_section__pic-container, */
   .section__pic-container {
     width: auto;
     height: 46vw;
     justify-content: center;
   }
-
   .hero_section__pic-container {
-    width: 46vw;            /* Set width equal to height */
+    width: 46vw;
     height: 46vw;
-    border-radius: 50%;     /* Keep it circular */
-    overflow: hidden;       /* Hide any overflow */
+    border-radius: 50%;
+    overflow: hidden;
     justify-content: center;
   }
-
   .section__text__p2 {
     font-size: 1.25rem;
   }
@@ -125,120 +228,17 @@
   .text-container {
     text-align: justify;
   }
-}
-
-
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 1200px) {
-  #contact {
-    height: auto; /* Allow auto height on medium screens too */
-    padding-top: 10vh; /* Add more space on small screens if needed */
-    margin-top: 0; /* Prevent any margin from creating a gap */
-  }
-}
-
-/* Further adjustments for very small screens */
-@media screen and (max-width: 768px) {
-  #contact {
-    padding-top: 8vh; /* Fine-tune padding for smaller screens */
-    margin-top: 0; /* Make sure there’s no unwanted margin */
-  }
-}
-
-/* For screens 1200px and below */
-@media screen and (max-width: 1200px) {
   .location {
     justify-content: center;
     text-align: center;
   }
 }
 
-/* For screens 600px and below */
-@media screen and (max-width: 600px) {
-  .location {
-    justify-content: center;
-    text-align: center;
-  }
-}
-
-/* Media Query for small screens */
-@media screen and (max-width: 768px) {
-  .logo {
-    position: fixed;  /* Change position to fixed */
-    top: 15px;         /* Stick it at the top */
-    left: 50px;        /* Keep left offset */
-    z-index: 10000;
-    width: 40px;       /* Smaller logo on smaller screens */
-    height: 40px;      /* Adjust size */
-    font-size: 1.2rem; /* Slightly smaller font size */
-    padding: 0.3rem;   /* Reduce padding for a smaller logo */
-    transition: transform 0.4s ease, opacity 0.4s ease;
-  }
-
-  .sticky-logo,
-  .logo:hover {
-    transform: scale(1.05); /* A slight, refined scale-up */
-    box-shadow: 0 4px 20px var(--logo-hover-shadow);  /* Enhanced shadow for depth */
-  }
-}
-
-/* Media Query for screens from 768px to 1024px */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .logo {
-    position: fixed;  /* Make the logo fixed on scroll */
-    top: 15px;         /* Stick it at the top */
-    left: 50px;        /* Keep left offset */
-    z-index: 10000;
-    width: 50px;       /* Slightly smaller logo for medium screens */
-    height: 50px;      /* Adjust size */
-    font-size: 1.3rem; /* Adjust font size */
-    padding: 0.3rem;   /* Reduce padding */
-    transition: transform 0.4s ease, opacity 0.4s ease;
-  }
-
-  .sticky-logo,
-  .logo:hover {
-    transform: scale(1.05); /* A slight, refined scale-up */
-    box-shadow: 0 4px 20px var(--logo-hover-shadow);  /* Enhanced shadow for depth */
-  }
-}
-
-/* Media Query for screens larger than 1024px */
-@media screen and (min-width: 1024px) {
-  .logo {
-    position: fixed;  /* Keep logo fixed even on larger screens */
-    top: 15px;         /* Stick it at the top */
-    left: 50px;        /* Keep left offset */
-    z-index: 10000;
-    width: 60px;       /* Larger logo size for large screens */
-    height: 60px;      /* Adjust size */
-    font-size: 1.5rem; /* Default font size */
-    padding: 0.3rem;   /* Keep padding */
-    transition: transform 0.4s ease, opacity 0.4s ease;
-  }
-
-  .sticky-logo,
-  .logo:hover {
-    transform: scale(1.05); /* A slight, refined scale-up */
-    box-shadow: 0 4px 20px var(--logo-hover-shadow);  /* Enhanced shadow for depth */
-  }
-}
-
-@media (max-width: 768px) {
-  #about {
-    margin-top: 10rem; /* Increased spacing */
-  }
-}
-@media screen and (max-width: 600px) {
-  #profile {
-    min-height: auto; /* Let it expand naturally */
-    margin-bottom: 8rem; /* Ensure space between sections */
-  }
-}
-
+/* ------------------------------
+   For viewport heights under 600px
+------------------------------ */
 @media (max-height: 600px) {
   #profile {
-    padding-top: 60vh; /* Increase this value to push content below the navbar */
+    padding-top: 10vh; /* Push content below the navbar */
   }
 }
-

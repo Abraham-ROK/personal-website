@@ -15,7 +15,7 @@ const Footer = () => {
           </ul>
         </div>
       </nav>
-      <p>{footerText}</p>
+      <p><small>{footerText}</small></p>
     </footer>
   );
 };

@@ -1,5 +1,5 @@
-// import heroImg from "../assets/img/hero_img.png";
-import heroImg from "../assets/img/giphy5.gif";
+// import heroImg from "../assets/img/1685463660924.gif";
+import heroImg from "../assets/img/giphy6.gif";
 import experienceIcon from "../assets/img/experience.png";
 import educationIcon from "../assets/img/education.png";
 
@@ -24,13 +24,17 @@ export const heroData = {
       id: "2",
       icon: educationIcon,
       iconDark: educationIconDark,
-      title: "Education",      description: "Master-level engineering degree from Efrei Paris",
+      title: "Education",
+      description: "Master-level engineering degree from Efrei Paris",
       extra: "",
     },
   ],
-  aboutText: `Data Engineer with expertise in Power BI, SQL, and data visualization, 
-  I have successfully developed robust ETL pipelines, optimized Azure cloud solutions, 
-  and designed interactive dashboards that enhance decision-making. 
-  I am passionate about leveraging my technical skills to drive digital transformation and enable sustainable business practices.`,
-
+  // This text will be rendered as a normal paragraph (not a bullet)
+  aboutText: "Data Engineer with expertise in Power BI, SQL, and data visualization.",
+  // And these will be rendered as bullet points
+  aboutBullets: [
+    "Successfully developed robust ETL pipelines and optimized Azure cloud solutions.",
+    "Designed interactive dashboards that enhance decision-making.",
+    "Passionate about leveraging technical skills to drive digital transformation and enable sustainable business practices.",
+  ],
 };

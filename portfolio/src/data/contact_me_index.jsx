@@ -16,7 +16,7 @@ export const contactData = {
       iconSrcDark: emalIconDark,
       iconAlt: "Email icon",
       link: "mailto:abraham.kenneth@outlook.fr",
-      linkText: "Email me",
+      linkText: "Let's Talk",
       iconClass: "email-icon", // Add a class for email
     },
     {
@@ -26,7 +26,7 @@ export const contactData = {
       iconAlt: "LinkedIn icon",
       link: "https://www.linkedin.com/in/r-abraham",
       linkText: "LinkedIn",
-      iconClass: "", // No special class for LinkedIn
+      iconClass: "icon", // No special class for LinkedIn
     },
   ],
 };

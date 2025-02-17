@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className={`logo ${isLogoSticky ? "sticky-logo" : ""}`} onClick={toggleDarkMode}>
           {navData.logo}
         </div>
-        <div>
+        <div className="nav-links-container">
           <ul className="nav-links">
             {navData.links.map((link) => (
               <li key={link.id}>

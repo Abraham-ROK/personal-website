@@ -5,10 +5,11 @@
 
 /* Default Light Mode */
 :root {
+  --bg-image: url('assets/img/light_mode.webp');
   --primary-color: white;
-  --primary-color-2: rgb(250, 250, 250);
+  --primary-color-2: rgba(250, 250, 250, 0);
   /* --primary-color-3: rgb(181, 181, 181); */
-  --background-color: rgb(255, 255, 255);
+  --background-color: rgba(255, 255, 255, 0);
   --secondary-color: black;
   --secondary-color-2: rgb(85, 85, 85);
   --button-text-color: black;
@@ -23,7 +24,7 @@
   /* --logo-ripple: rgba(181, 182, 182, 0.1); */
   --menu-hover-color: grey;
   --menu-underline-color: rgb(181, 181, 181);
-  --icon-background: rgb(255, 255, 255);
+  --icon-background: rgba(255, 255, 255, 0);
   --experience-subtitle-color: rgb(85, 85, 85);
   --hover-box-shadow: rgba(0, 0, 0, 0.1);
   --moon-background: radial-gradient(circle at center, #f0f0f0 30%, #d0d0d0 60%, #b0b0b0 100%);
@@ -36,12 +37,13 @@
 
 /* Dark Mode */
 [theme="dark-mode"] {
+  --bg-image: url('assets/img/dark_mode.jpg');
   --primary-color: rgba(0, 0, 0, 0.617); /* color for Experience Education and Explore My
 
   Experience*/
-  --primary-color-2: rgb(39, 39, 39); /* color for project and Contact Me*/
+  --primary-color-2: rgba(39, 39, 39, 0); /* color for project and Contact Me*/
   /* --primary-color-3: rgb(74, 74, 74); */
-  --background-color: rgb(33, 33, 33); /* hole page color*/
+  --background-color: rgba(33, 33, 33, 0); /* hole page color*/
   --secondary-color: white;
   --secondary-color-2: rgb(170, 170, 170);
   --button-background: rgb(202, 202, 202);
@@ -56,7 +58,7 @@
   /* --logo-ripple: rgba(255, 255, 255, 0.1); */
   --menu-hover-color: lightgrey;
   --menu-underline-color: rgb(170, 170, 170);
-  --icon-background: rgb(33, 33, 33);
+  --icon-background: rgba(33, 33, 33, 0);
   --experience-subtitle-color: rgb(200, 200, 200);
   --hover-box-shadow: rgba(255, 255, 255, 0.1);
   /* Dark Mode Colors */
@@ -74,7 +76,7 @@
   color: var(--logo-text);
 } */
 
-h3 {
+h2, p, li, h3 {
   color: var(--secondary-color);
 }
 
@@ -88,14 +90,17 @@ h3 {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);
+  overflow-x: hidden;
+}
+body {
+  background-image: var(--bg-image);
+  background-repeat: repeat;       /* repeat the texture to cover the whole page */
+  background-attachment: fixed;    /* optional: makes it stay fixed during scroll */
+  background-size: auto;           /* or cover/contain depending on your image */
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-p {
-  color: var(--secondary-color-2);
 }
 
 /* TRANSITION FOR LINKS*/
@@ -115,7 +120,7 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 15vh;
+  height: 10vh;
 }
 
 .nav-links {
@@ -131,7 +136,7 @@ a {
 
 }
 
-nav a:hover {
+a:hover {
   color: var(--button-text-hover);
   text-decoration: underline;
   text-underline-offset: 0.7rem;
@@ -311,7 +316,7 @@ nav a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
+  /* padding-top: 4vh; */
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -320,15 +325,17 @@ section {
 
 .section-container {
   display: flex;
+  justify-content: space-evenly;
 }
 
 /* PROFILE SECTION */ 
 
 #desktop-nav {
-  height: auto !important;
-  padding-top: 5vh;
+  /* height: auto !important; */
+  /* padding-top: 2vh; */
   background-color: var(--background-color);
   z-index: 1000;
+  margin-bottom: 3rem;
   /* border: 6px solid rgb(0, 255, 81); */
 }
 
@@ -338,10 +345,10 @@ section {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    padding-top: 8vh; /* Initial padding for smaller screens */
-    margin-bottom: 5rem;
+    padding-top: 2vh; /* Initial padding for smaller screens */
+    margin-bottom: 2rem;
     box-sizing: border-box;
-    min-height: 80vh;  /* Allows flexibility */
+    min-height: 70vh;  /* Allows flexibility */
     /* border: 6px solid red; */
   }
 
@@ -462,8 +469,8 @@ section {
 #about {
   height: auto !important;
   position: relative;
-  padding-top: 5rem;
-  margin-top: 0rem; /* More separation */
+  /* padding-top: 5rem; */
+
   /* border: 2px solid blue; */
 }
 
@@ -487,6 +494,14 @@ section {
   border-radius: 2rem;
 }
 
+/* Container for the grid of experience items */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem; /* Adjust spacing between grid items */
+}
+
+/* Your existing styles for each details container remain unchanged */
 .details-container {
   padding: 1.5rem;
   flex: 1;
@@ -497,6 +512,7 @@ section {
   text-align: center;
 }
 
+
 .details-container:hover {
     transform: translateY(-10px); /* Moves the block up */
     box-shadow: 0px 10px 20px var(--hover-box-shadow); /* Optional: Adds a subtle shadow */
@@ -504,7 +520,7 @@ section {
   }
 
 .section-container {
-  gap: 4rem;
+  gap: 5rem;
   height: 80%;
 }
 
@@ -519,18 +535,19 @@ section {
 #experience {
   height: auto !important;
   position: relative;
-  margin-top: 2rem; /* Adjust the value as needed to create a gap */
+  margin-top: 5rem; /* Adjust the value as needed to create a gap */
 }
 
 /* Experience Subtitle */
 .experience-sub-title {
-  color: var(--experience-subtitle-color);
+  /* color: var(--experience-subtitle-color); */
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
 .experience-details-container {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -561,7 +578,7 @@ article .icon {
 #projects {
   height: auto !important;
   position: relative;
-  margin-top: 2rem; /* Adjust the value as needed to create a gap */
+  margin-top: 5rem; /* Adjust the value as needed to create a gap */
 }
 
 .color-container {
@@ -593,8 +610,6 @@ article .icon {
     justify-content: center;
     flex-direction: column;
     padding-top: 10vh; /* Adjust the padding as needed for space */
-    margin-top: 0; /* Make sure there is no top margin causing the gap */
-    margin-bottom: 0; /* Remove any margin at the bottom */
     height: auto; /* Let the height be determined by the content */
   }
 
@@ -606,7 +621,7 @@ article .icon {
   border-color: var(--container-border);
   background: var(--primary-color-2);
   margin: 2rem auto;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
 }
 
 .contact-info-container {
@@ -634,7 +649,7 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
+  height: 10vh;
   margin: 0 1rem;
 }
 
@@ -660,7 +675,7 @@ footer p {
     justify-content: flex-start; /* Ensure items start from left */
     align-items: center;
     position: relative;
-    margin-top: 2rem; /* Adjust the value as needed to create a gap */
+    margin-top: 3rem; /* Adjust the value as needed to create a gap */
   }
     
   /* The scrolling container holding all the items */
@@ -706,3 +721,13 @@ footer p {
     }
   }
   
+
+  /* Ensure the container creates a 3D context */
+.scroll-section {
+  min-height: 72vh;
+  perspective: 1200px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  /* Optional: add background color or image per section */
+}

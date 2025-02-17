@@ -1,18 +1,17 @@
 import React from 'react';
 import { experienceData } from '../../data/skills_index';
-import { useDarkMode } from "../Home/Hooks/useDarkMode"; // Adjust the import path as needed
-
-
+import { useDarkMode } from "../Home/Hooks/useDarkMode";
 
 const MySkills = () => {
   const darkMode = useDarkMode();
 
   return (
     <section id="experience">
-      <p className="section__text__p1">Explore My</p>
-      <h1 className="title">Experience</h1>
+      <p className="section__text__p1">Want to Explore My</p>
+      <h1 className="title">Skills</h1>
       <div className="experience-details-container">
-        <div className="about-containers">
+        {/* Grid wrapper to layout details in two columns */}
+        <div className="experience-grid">
           {experienceData.experience.map((group) => (
             <div key={group.id} className="details-container">
               <h2 className="experience-sub-title">{group.title}</h2>
@@ -20,7 +19,6 @@ const MySkills = () => {
                 {group.skills.map((skill) => (
                   <article key={skill.id}>
                     <img
-                      // Use iconDark when darkMode is active, otherwise icon
                       src={darkMode ? skill.iconDark : skill.icon}
                       alt="Experience icon"
                       className="icon"

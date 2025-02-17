@@ -10,7 +10,7 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <p className="section__text__p1">Browse My Recent</p>
+      <p className="section__text__p1">Want to Browse My Recent</p>
       <h1 className="title">Projects</h1>
       <div
         className="projects-viewport"
