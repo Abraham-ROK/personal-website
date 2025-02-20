@@ -37,7 +37,15 @@ export default function HeroSection() {
             {/* Render the additional points as a bullet list */}
             <ul>
               {heroData.aboutBullets.map((bullet, index) => (
-                <li key={index} style={{ fontWeight: 'bold' }}>{bullet}</li>
+                <li 
+                key={index} 
+                style={{ fontWeight: 'bold',
+                  textIndent: '2em', // This indents the content (including bullet if inside)
+                  listStylePosition: 'inside' // Moves the bullet inside the element's content flow
+                }}
+                >
+                  {bullet}
+                  </li>
               ))}
             </ul>
           </div>

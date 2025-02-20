@@ -13,7 +13,7 @@ export const profileData = {
   id: "profile",
   image: profilePic,
   altText: "A-K",
-  greeting: "Hello, I'm",
+  greeting: "Hello, I am",
   name: "Abraham",
   title: "Data Engineer",
   location: "Paris, Île-de-France",

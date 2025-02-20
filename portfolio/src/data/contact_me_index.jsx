@@ -7,7 +7,7 @@ import emalIconDark from "../assets/img/email_dark.png";
 
 
 export const contactData = {
-  sectionTitle: "Want to get in Touch",
+  sectionTitle: "Want to get in Touch? I’d love to hear from you.",
   mainTitle: "Contact Me",
   contactInfo: [
     {
