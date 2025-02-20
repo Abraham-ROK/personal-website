@@ -30,11 +30,11 @@ export const heroData = {
     },
   ],
   // This text will be rendered as a normal paragraph (not a bullet)
-  aboutText: "Data Engineer with expertise in Power BI, SQL, and data visualization.",
+  aboutText: "Data Engineer skilled in using Power BI, SQL, and Python.",
   // And these will be rendered as bullet points
   aboutBullets: [
-    "Successfully developed robust ETL pipelines and optimized Azure cloud solutions.",
-    "Designed interactive dashboards that enhance decision-making.",
-    "Passionate about leveraging technical skills to drive digital transformation and enable sustainable business practices.",
+    "I build ETL pipelines and improve Azure cloud solutions.",
+    "I create dashboards that help people make decisions.",
+    "I use my technical skills to improve business practices.",
   ],
 };
