@@ -668,62 +668,13 @@ footer p {
 //////////////////////////////////////////////// */
 /* Viewport to contain the scrolling projects */
 
-/* CAN I WRITE A MEDIA QUERY FOR THIS PART  */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
 
-/* Outer container to hide the overflow and ensure smooth scrolling */
-.projects-viewport {
-    overflow: hidden;
-    width: 100%; /* Adjust based on your design */
-    display: flex;
-    justify-content: flex-start; /* Ensure items start from left */
-    align-items: center;
-    position: relative;
-    margin-top: 3rem; /* Adjust the value as needed to create a gap */
-  }
-    
-  /* The scrolling container holding all the items */
-  .projects-container {
-    gap: 2.5rem;
-    display: flex;
-    flex-wrap: nowrap; /* Prevent line breaks */
-    width: max-content; /* Container spans exactly the width of its children */
-    padding: 10px 0;
-    animation: scroll-animation 25s linear infinite; /* Adjust duration as needed */
-    white-space: nowrap; /* Prevent line breaks */
-    /* Removed the gap property to avoid extra spacing at the duplication boundary */
-  }
-    
-  /* Each project item now uses internal padding for consistent spacing */
-  .project-item {
-    flex: 0 0 300px; /* Fixed width for each project */
-    padding: 0 1rem; /* Adds horizontal spacing inside each item */
-  }
-    
-  /* Image inside project item */
-  .project-img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 8px;
-  }
-    
-  /* Pause the animation when the mouse enters */
-  .projects-container.paused {
-    animation-play-state: paused;
-  }
-    
-  /* Keyframes for the scrolling animation:
-     The animation moves exactly one full set of items (50% of the duplicated content)
-     so that the transition between the original and duplicated items is seamless. */
-  @keyframes scroll-animation {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
 
   /* Ensure the container creates a 3D context */
 .scroll-section {

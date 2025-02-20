@@ -242,3 +242,10 @@
     padding-top: 10vh; /* Push content below the navbar */
   }
 }
+/* Responsive design for small screens */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .experience-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 1.5rem; /* Reduce gap for better spacing */
+  }
+}

@@ -1,28 +1,14 @@
 import { portfolioData } from "../../data/portfolio_index";
-import { useProjectFunctions } from "../Home/Hooks/usePorfolio";
 
-const Projects = () => {
-  const { 
-    isPaused,
-    projectsRef,
-    handleMouseEnter,
-    handleMouseLeave } = useProjectFunctions();
-
+const ProjectsGrid = () => {
   return (
     <section id="projects">
       <p className="section__text__p1">Want to Browse My Recent</p>
       <h1 className="title">Projects</h1>
-      <div
-        className="projects-viewport"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div
-          ref={projectsRef}
-          className={`projects-container ${isPaused ? "paused" : ""}`}
-        >
-          {portfolioData.projects.map((project, index) => (
-            <div className="details-container color-container" key={index}>
+      <div className="projects-grid">
+        {portfolioData.projects.map((project, index) => (
+          <div className="project-item" key={index}>
+            <div className="details-container color-container">
               <div className="article-container">
                 <img
                   src={project.imgSrc}
@@ -46,11 +32,11 @@ const Projects = () => {
                 </button>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default Projects;
+export default ProjectsGrid;
