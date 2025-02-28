@@ -8,9 +8,9 @@ export const portfolioData = {
     projects: [
       {
         id: 1,
-        title: "Project One",
+        title: "InsightHub Data Warehouse",
         imgSrc:project1,
-        githubLink: "https://github.com/",
+        githubLink: "https://github.com/Abraham-ROK/Data-Warehouse",
         demoLink: "https://github.com/",
       },
       {
