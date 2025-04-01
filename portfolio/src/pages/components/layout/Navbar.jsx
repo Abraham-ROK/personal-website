@@ -1,6 +1,6 @@
 import React from "react";
-import { navData } from "../../data/navbar_index";
-import { useNavbarFunctions } from "../Home/Hooks/useNavigation";
+import { navData } from "../../../data/navbar_index";
+import { useNavbarFunctions } from "../../hooks/useNavigation";
 
 const Navbar = () => {
   const { isMenuOpen, showHamburger, isLogoSticky, toggleMenu, closeMenu, toggleDarkMode } = useNavbarFunctions();

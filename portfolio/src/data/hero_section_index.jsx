@@ -1,13 +1,13 @@
-import profilePic from "../assets/img/giphy_work.gif";
-import resumePDF from "../assets/img/Abraham_Kenneth_DE.pdf";
-import linkedinIcon from "../assets/img/linkedin.png";
-import githubIcon from "../assets/img/github.png";
-import locationImage from "../assets/img/location.png";
+import profilePic from "../assets/img/profile/giphy_work.gif";
+import resumePDF from "../assets/documents/Abraham_Kenneth_DE.pdf";
+import linkedinIcon from "../assets/img/icons/social/linkedin.png";
+import githubIcon from "../assets/img/icons/social/github.png";
+import locationImage from "../assets/img/icons/ui/location.png";
 
 // Dark mode
-import linkedinIconDark from "../assets/img/linkedin_dark.png";
-import githubIconDark from "../assets/img/github_dark.png";
-import locationImageDark from "../assets/img/location_dark.png";
+import linkedinIconDark from "../assets/img/icons/social/linkedin_dark.png";
+import githubIconDark from "../assets/img/icons/social/github_dark.png";
+import locationImageDark from "../assets/img/icons/ui/location_dark.png";
 
 export const profileData = {
   id: "profile",

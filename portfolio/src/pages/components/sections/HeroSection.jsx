@@ -1,6 +1,6 @@
 import React from "react";
-import { profileData } from "../../data/hero_section_index";
-import { useDarkMode } from "../Home/Hooks/useDarkMode"; // adjust the path as needed
+import { profileData } from "../../../data/hero_section_index";
+import { useDarkMode } from "../../hooks/useDarkMode"; // adjust the path as needed
 
 const HeroSection = () => {
   const darkMode = useDarkMode();

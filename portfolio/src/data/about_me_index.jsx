@@ -1,11 +1,11 @@
 // import heroImg from "../assets/img/1685463660924.gif";
-import heroImg from "../assets/img/giphy6.gif";
-import experienceIcon from "../assets/img/experience.png";
-import educationIcon from "../assets/img/education.png";
+import heroImg from "../assets/img/profile/giphy6.gif";
+import experienceIcon from "../assets/img/icons/ui/experience.png";
+import educationIcon from "../assets/img/icons/ui/education.png";
 
 // Dark mode 
-import experienceIconDark from "../assets/img/experience_dark.png";
-import educationIconDark from "../assets/img/education_dark.png";
+import experienceIconDark from "../assets/img/icons/ui/experience_dark.png";
+import educationIconDark from "../assets/img/icons/ui/education_dark.png";
 
 export const heroData = {
   title: "Want To Know More",

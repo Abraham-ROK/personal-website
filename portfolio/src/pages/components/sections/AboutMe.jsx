@@ -1,5 +1,5 @@
-import { heroData } from "../../data/about_me_index";
-import { useDarkMode } from "../Home/Hooks/useDarkMode";
+import { heroData } from "../../../data/about_me_index";
+import { useDarkMode } from "../../hooks/useDarkMode";
 
 export default function HeroSection() {
   const darkMode = useDarkMode();

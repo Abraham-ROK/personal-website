@@ -1,6 +1,6 @@
 import React from "react";
-import { contactData } from "../../data/contact_me_index";
-import { useDarkMode } from "../Home/Hooks/useDarkMode";// Adjust the path as needed
+import { contactData } from "../../../data/contact_me_index";
+import { useDarkMode } from "../../hooks/useDarkMode";// Adjust the path as needed
 
 const Contact = () => {
   const darkMode = useDarkMode();

@@ -1,4 +1,4 @@
-import { portfolioData } from "../../data/portfolio_index";
+import { portfolioData } from "../../../data/portfolio_index";
 
 const ProjectsGrid = () => {
   return (

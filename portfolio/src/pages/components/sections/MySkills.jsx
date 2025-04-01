@@ -1,6 +1,6 @@
 import React from 'react';
-import { experienceData } from '../../data/skills_index';
-import { useDarkMode } from "../Home/Hooks/useDarkMode";
+import { experienceData } from '../../../data/skills_index';
+import { useDarkMode } from "../../hooks/useDarkMode";
 
 const MySkills = () => {
   const darkMode = useDarkMode();

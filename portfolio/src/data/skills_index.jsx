@@ -1,5 +1,5 @@
-import checkmarkLight from "../assets/img/checkmark.png";
-import checkmarkDark from "../assets/img/checkmark_dark.png";
+import checkmarkLight from "../assets/img/icons/ui/checkmark.png";
+import checkmarkDark from "../assets/img/icons/ui/checkmark_dark.png";
 
 export const experienceData = {
   experience: [
