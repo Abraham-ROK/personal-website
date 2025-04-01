@@ -1,9 +1,9 @@
-import linkedinIcon from "../assets/img/linkedin.png";
-import emalIcon from "../assets/img/email.png";
+import linkedinIcon from "../assets/img/icons/social/linkedin.png";
+import emalIcon from "../assets/img/icons/social/email.png";
 
 // Dark mode 
-import linkedinIconDark from "../assets/img/linkedin_dark.png";
-import emalIconDark from "../assets/img/email_dark.png";
+import linkedinIconDark from "../assets/img/icons/social/linkedin_dark.png";
+import emalIconDark from "../assets/img/icons/social/email_dark.png";
 
 
 export const contactData = {

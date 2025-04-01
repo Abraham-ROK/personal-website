@@ -1,6 +1,6 @@
-import project1 from "../assets/img/project-1.png";
-import project2 from "../assets/img/project-2.png";
-import project3 from "../assets/img/project-3.png";
+import project1 from "../assets/img/projects/project-1.png";
+import project2 from "../assets/img/projects/project-2.png";
+import project3 from "../assets/img/projects/project-3.png";
 
 export const portfolioData = {
     sectionTitle: "Want to Browse My Recent",

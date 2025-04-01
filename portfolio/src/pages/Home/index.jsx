@@ -1,12 +1,12 @@
 // Home.js
 import React, { useEffect, useRef } from "react";
-import HeroSection from "../HeroSection";
-import AboutMe from "../AboutMe";
-import MySkills from "../MySkills";
-import MyPortfolio from "../MyPortfolio";
-import ContactMe from "../ContactMe";
-import Footer from "../Footer";
-import { animateSections } from "../Hooks/useScroll"; // adjust path if needed
+import HeroSection from "../components/sections/HeroSection";
+import AboutMe from "../components/sections/AboutMe";
+import MySkills from "../components/sections/MySkills";
+import MyPortfolio from "../components/sections/MyPortfolio";
+import ContactMe from "../components/sections/ContactMe";
+import Footer from "../components/layout/Footer";
+import { animateSections } from "../hooks/useScroll"; // adjust path if needed
 
 export default function Home() {
   const homeRef = useRef(null);

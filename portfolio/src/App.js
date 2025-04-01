@@ -1,9 +1,9 @@
-import "./App.css";
-import "./mediaqueries.css";
+import "./styles/App.css";
+import "./styles/mediaqueries.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./Pages/Home/Navbar";
-import Home from "./Pages/Home/Homescreen";
+import Navbar from "./pages/components/layout/Navbar";
+import Home from "./pages/Home";
 
 function App() {
   return (
