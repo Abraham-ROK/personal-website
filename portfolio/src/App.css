@@ -1,14 +1,11 @@
-/* GENERAL GLOBAL PAGE*/
-
+/* GENERAL STYLES AND IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-
-/* Default Light Mode */
+/* ROOT VARIABLES - LIGHT MODE (DEFAULT) */
 :root {
   --bg-image: url('assets/img/light_mode.webp');
   --primary-color: white;
   --primary-color-2: rgba(250, 250, 250, 0);
-  /* --primary-color-3: rgb(181, 181, 181); */
   --background-color: rgba(255, 255, 255, 0);
   --secondary-color: black;
   --secondary-color-2: rgb(85, 85, 85);
@@ -16,72 +13,51 @@
   --button-background: rgb(53, 53, 53);
   --button-text-hover: grey;
   --button-border: rgb(53, 53, 53) 0.1rem solid;
-  /* --button-border-2: rgb(255, 255, 255) 0.1rem solid; */
   --container-border: rgb(163, 163, 163);
-  /* --logo-background: #ffffff; */
-  /* --logo-text: #333; */
   --logo-hover-shadow: rgba(0, 0, 0, 0.1);
-  /* --logo-ripple: rgba(181, 182, 182, 0.1); */
   --menu-hover-color: grey;
   --menu-underline-color: rgb(181, 181, 181);
   --icon-background: rgba(255, 255, 255, 0);
   --experience-subtitle-color: rgb(85, 85, 85);
   --hover-box-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Moon styling */
   --moon-background: radial-gradient(circle at center, #f0f0f0 30%, #d0d0d0 60%, #b0b0b0 100%);
   --moon-box-shadow-1: rgba(0, 0, 0, 0.2);
   --moon-before-back: #c0c0c0;
-  --moon-box-shadow-2:rgba(0, 0, 0, 0.5);
-  --moon-box-shadow-3: 0 0 30px rgba(0, 0, 0, 0.3); /* Soft dark shadow with more depth */
+  --moon-box-shadow-2: rgba(0, 0, 0, 0.5);
+  --moon-box-shadow-3: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
-
-/* Dark Mode */
+/* DARK MODE VARIABLES */
 [theme="dark-mode"] {
   --bg-image: url('assets/img/dark_mode.jpg');
-  --primary-color: rgba(0, 0, 0, 0.617); /* color for Experience Education and Explore My
-
-  Experience*/
-  --primary-color-2: rgba(39, 39, 39, 0); /* color for project and Contact Me*/
-  /* --primary-color-3: rgb(74, 74, 74); */
-  --background-color: rgba(33, 33, 33, 0); /* hole page color*/
+  --primary-color: rgba(0, 0, 0, 0.617);
+  --primary-color-2: rgba(39, 39, 39, 0);
+  --background-color: rgba(33, 33, 33, 0);
   --secondary-color: white;
   --secondary-color-2: rgb(170, 170, 170);
   --button-background: rgb(202, 202, 202);
   --button-text-color: white;
   --button-text-hover: lightgrey;
   --button-border: rgb(202, 202, 202) 0.1rem solid;
-  /* --button-border-2: rgb(247, 244, 244) 0.1rem solid; */
   --container-border: rgb(92, 92, 92);
-  /* --logo-background: #333; */
-  /* --logo-text: #000000; */
   --logo-hover-shadow: rgba(3, 3, 3, 0.2);
-  /* --logo-ripple: rgba(255, 255, 255, 0.1); */
   --menu-hover-color: lightgrey;
   --menu-underline-color: rgb(170, 170, 170);
   --icon-background: rgba(33, 33, 33, 0);
   --experience-subtitle-color: rgb(200, 200, 200);
   --hover-box-shadow: rgba(255, 255, 255, 0.1);
-  /* Dark Mode Colors */
---moon-background: radial-gradient(circle at center, #3a3a3a 30%, #2b2b2b 60%, #1a1a1a 100%);
---moon-box-shadow-1: rgba(255, 255, 255, 0.2);  /* Lighter shadow for the moon */
---moon-before-back: #555555;  /* Darker gray for the crater */
---moon-box-shadow-2: rgba(0, 0, 0, 0.7);  /* Stronger shadow to enhance depth */
---moon-box-shadow-3: 0 0 20px rgba(255, 255, 255, 0.5); /* Optional glow effect */
+  
+  /* Dark mode moon */
+  --moon-background: radial-gradient(circle at center, #3a3a3a 30%, #2b2b2b 60%, #1a1a1a 100%);
+  --moon-box-shadow-1: rgba(255, 255, 255, 0.2);
+  --moon-before-back: #555555;
+  --moon-box-shadow-2: rgba(0, 0, 0, 0.7);
+  --moon-box-shadow-3: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
-
-/* Optional: Update the logo appearance in dark mode */
-/* body.dark-mode .logo {
-  background: var(--logo-background);
-  color: var(--logo-text);
-} */
-
-h2, p, li, h3 {
-  color: var(--secondary-color);
-}
-
-
-
+/* BASIC ELEMENT STYLING */
 * {
   margin: 0;
   padding: 0;
@@ -90,29 +66,27 @@ h2, p, li, h3 {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);
-}
-body {
   background-image: var(--bg-image);
-  background-repeat: repeat;       /* repeat the texture to cover the whole page */
-  background-attachment: fixed;    /* optional: makes it stay fixed during scroll */
-  background-size: auto;           /* or cover/contain depending on your image */
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: auto;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* TRANSITION FOR LINKS*/
+h2, p, li, h3 {
+  color: var(--secondary-color);
+}
 
-a,
-.btn {
+/* TRANSITIONS */
+a, .btn {
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
-
-nav,
-.nav-links {
+/* NAVIGATION STYLING */
+nav, .nav-links {
   display: flex;
 }
 
@@ -132,7 +106,6 @@ a {
   color: var(--secondary-color);
   text-decoration: none;
   text-decoration-color: var(--primary-color);
-
 }
 
 a:hover {
@@ -142,13 +115,14 @@ a:hover {
   text-decoration-color: var(--secondary-color);
 }
 
+/* LOGO STYLING */
 .logo {
   position: absolute;
   top: 18px;
   left: 50px;
   width: 60px;
   height: 60px;
-  border-radius: 50%;  /* Perfect circle for full moon */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,43 +132,35 @@ a:hover {
   overflow: hidden;
   text-transform: uppercase;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  /* Background for a moon-like effect (full moon) */
   background: var(--moon-background);
-  /* This gradient simulates the moon's surface with lighter and darker areas */
-  
-  box-shadow: 0 2px 10px var(--moon-box-shadow-1),var(--moon-box-shadow-3);  /* Optional shadow to make it look more 3D */
+  box-shadow: 0 2px 10px var(--moon-box-shadow-1), var(--moon-box-shadow-3);
 }
 
-/* Crater effect with ::before (moon surface detail) */
 .logo::before {
   content: '';
   position: absolute;
-  top: 15%;  /* Adjust position of the crater */
-  left: 30%;  /* Adjust position of the crater */
-  width: 20%;  /* Size of the crater */
-  height: 20%;  /* Size of the crater */
-  background: var(--moon-before-back);  /* Crater color */
-  border-radius: 50%;  /* Circular crater */
-  box-shadow: inset 0 0 5px var(--moon-box-shadow-2);  /* Adding depth to the crater */
+  top: 15%;
+  left: 30%;
+  width: 20%;
+  height: 20%;
+  background: var(--moon-before-back);
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px var(--moon-box-shadow-2);
   transform: rotate(90deg);
   transition: transform 0.5s ease;
 }
 
-
-
-/* When the logo becomes sticky, apply the fixed positioning and reduce size */
 .sticky-logo {
-  position: fixed; 
+  position: fixed;
   top: 15px;
   left: 50px;
   z-index: 10000;
-  background-color: var(--primary-color); /* Optional: helps prevent overlap with content */
-  padding: 0.3rem; /* Reduce padding for a smaller logo */
-  font-size: 1.2rem; /* Optional: adjust font size for a smaller logo */
-  width: 40px;  /* Set the width of the logo circle */
-  height: 40px; /* Set the height of the logo circle */
-  border-radius: 50%; /* Keep it circular */
+  background-color: var(--primary-color);
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   transition: transform 0.4s ease, opacity 0.4s ease;
   background: var(--moon-background);
   color: var(--logo-text);
@@ -202,35 +168,29 @@ a:hover {
 
 .sticky-logo,
 .logo:hover {
-  transform: scale(1.05);    /* A slight, refined scale-up */
-  box-shadow: 0 4px 20px var(--logo-hover-shadow);  /* Enhanced shadow for depth */
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px var(--logo-hover-shadow);
 }
 
-
 /* HAMBURGER MENU */
-
-/* By default, keep the hamburger menu hidden */
 #hamburger-nav {
   height: auto !important;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  }
-  
-  /* When scrolling past the navbar, smoothly fade it in */
-  #hamburger-nav.visible {
-    height: auto !important;
-    opacity: 1;
-    visibility: visible;
-  }
-  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#hamburger-nav.visible {
+  height: auto !important;
+  opacity: 1;
+  visibility: visible;
+}
+
 .hamburger-menu {
-  /* position: relative;
-  display: inline-block; */
   position: fixed;
-  top: 20px;    /* Adjust as needed */
-  right: 20px;  /* Adjust as needed */
-  z-index: 1000; /* Ensures it stays on top of other elements */
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
   display: inline-block;
 }
 
@@ -259,7 +219,7 @@ a:hover {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
@@ -267,12 +227,11 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color:  var(--secondary-color);
+  color: var(--secondary-color);
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Menu Links */
 .menu-links a:hover {
   color: var(--menu-hover-color);
   text-decoration: underline;
@@ -288,6 +247,7 @@ a:hover {
   max-height: 300px;
 }
 
+/* Hamburger animation */
 .hamburger-icon.open span:first-child {
   transform: rotate(45deg) translate(10px, 5px);
 }
@@ -312,10 +272,8 @@ a:hover {
   transform: none;
 }
 
-/* SECTIONS */
-
+/* SECTION STYLING */
 section {
-  /* padding-top: 4vh; */
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -327,29 +285,25 @@ section {
   justify-content: space-evenly;
 }
 
-/* PROFILE SECTION */ 
-
+/* NAVBAR STYLING */
 #desktop-nav {
-  /* height: auto !important; */
-  /* padding-top: 2vh; */
   background-color: var(--background-color);
   z-index: 1000;
   margin-bottom: 3rem;
-  /* border: 6px solid rgb(0, 255, 81); */
 }
 
+/* PROFILE SECTION */
 #profile {
-    height: auto !important;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    padding-top: 2vh; /* Initial padding for smaller screens */
-    margin-bottom: 2rem;
-    box-sizing: border-box;
-    min-height: 70vh;  /* Allows flexibility */
-    /* border: 6px solid red; */
-  }
+  height: auto !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding-top: 2vh;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  min-height: 70vh;
+}
 
 .section__pic-container {
   display: flex;
@@ -363,10 +317,9 @@ section {
   height: 350px;
   width: 350px;
   margin: auto 0;
-  border-radius: 50%;    /* Makes the container circular */
-  overflow: hidden;      /* Hides any overflow from the contained image */
+  border-radius: 50%;
+  overflow: hidden;
 }
-
 
 .section__text {
   align-self: center;
@@ -391,13 +344,15 @@ section {
   font-size: 3rem;
   text-align: center;
 }
+
 .location {
   display: flex;
-  align-items: center; /* Optional: vertically centers the items */
-  gap: 0.5rem;       /* Optional: gap between the text and the icon */
-  margin-bottom: 1.5rem;  /* Adds a gap below the container */
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
+/* SOCIAL MEDIA CONTAINER */
 #socials-container {
   height: auto !important;
   display: flex;
@@ -406,15 +361,14 @@ section {
   gap: 1rem;
 }
 
-
-/* Icons */
+/* ICONS */
 .icon {
   cursor: pointer;
   height: 2rem;
   background: var(--icon-background);
 }
-/* BUTTONS */
 
+/* BUTTONS */
 .btn-container {
   display: flex;
   justify-content: center;
@@ -459,18 +413,10 @@ section {
   background: var(--secondary-color);
 }
 
-.btn-container {
-  gap: 1rem;
-}
-
 /* ABOUT SECTION */
-
 #about {
   height: auto !important;
   position: relative;
-  /* padding-top: 5rem; */
-
-  /* border: 2px solid blue; */
 }
 
 .about-containers {
@@ -493,14 +439,19 @@ section {
   border-radius: 2rem;
 }
 
-/* Container for the grid of experience items */
+/* EXPERIENCE SECTION */
+#experience {
+  height: auto !important;
+  position: relative;
+  margin-top: 5rem;
+}
+
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem; /* Adjust spacing between grid items */
+  gap: 3rem;
 }
 
-/* Your existing styles for each details container remain unchanged */
 .details-container {
   padding: 1.5rem;
   flex: 1;
@@ -511,35 +462,13 @@ section {
   text-align: center;
 }
 
-
 .details-container:hover {
-    transform: translateY(-10px); /* Moves the block up */
-    box-shadow: 0px 10px 20px var(--hover-box-shadow); /* Optional: Adds a subtle shadow */
-    transition: all ease-in-out 0.3s;
-  }
-
-.section-container {
-  gap: 5rem;
-  height: 80%;
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px var(--hover-box-shadow);
+  transition: all ease-in-out 0.3s;
 }
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
-
-/* EXPERIENCE SECTION */
-
-#experience {
-  height: auto !important;
-  position: relative;
-  margin-top: 5rem; /* Adjust the value as needed to create a gap */
-}
-
-/* Experience Subtitle */
 .experience-sub-title {
-  /* color: var(--experience-subtitle-color); */
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -573,11 +502,10 @@ article .icon {
 }
 
 /* PROJECTS SECTION */
-
 #projects {
   height: auto !important;
   position: relative;
-  margin-top: 5rem; /* Adjust the value as needed to create a gap */
+  margin-top: 5rem;
 }
 
 .color-container {
@@ -601,16 +529,22 @@ article .icon {
   border-color: var(--container-border);
 }
 
-/* CONTACT */
+/* PROJECTS GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
 
+/* CONTACT SECTION */
 #contact {
-    height: auto !important;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 10vh; /* Adjust the padding as needed for space */
-    height: auto; /* Let the height be determined by the content */
-  }
+  height: auto !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10vh;
+}
 
 .contact-info-upper-container {
   display: flex;
@@ -620,7 +554,6 @@ article .icon {
   border-color: var(--container-border);
   background: var(--primary-color-2);
   margin: 2rem auto;
-  /* padding: 0.5rem; */
 }
 
 .contact-info-container {
@@ -640,13 +573,12 @@ article .icon {
 }
 
 .email-icon {
-    height: 2.54rem; /* Adjust to match other icons */
-    object-fit: contain; /* Ensures icon doesn't stretch */
-    vertical-align: middle; /* Centers the icon vertically */
-  }
+  height: 2.54rem;
+  object-fit: contain;
+  vertical-align: middle;
+}
 
 /* FOOTER SECTION */
-
 footer {
   height: 10vh;
   margin: 0 1rem;
@@ -656,28 +588,11 @@ footer p {
   text-align: center;
 }
 
-/* ////////////////////////////////////////////////
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-//////////////////////////////////////////////// */
-/* Viewport to contain the scrolling projects */
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  margin-top: 3rem;
-}
-
-
-  /* Ensure the container creates a 3D context */
+/* SCROLL ANIMATION */
 .scroll-section {
   min-height: 72vh;
   perspective: 1200px;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  /* Optional: add background color or image per section */
 }
